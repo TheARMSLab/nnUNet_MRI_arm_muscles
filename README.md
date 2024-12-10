@@ -41,8 +41,4 @@ The models were trained on and output labels for the following muscles.
 1. Install nnUNet: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md
 2. Download the zip file in this repository containing the trained model weights (created using the nnUNetv1_export_model_to_zip command).
 3. Import the trained model using the command "nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP"
-4. ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
+4. ```function test() {console.log("notice the blank line before this function?");}```
