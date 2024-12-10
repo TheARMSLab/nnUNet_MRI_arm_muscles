@@ -14,7 +14,7 @@ Default nnUNet settings were used for training (trained Aug '24). The weights ar
 
 The models were trained on and output labels for the following muscles.
 
-**A)** Shoulder and Upper Arm
+**A) Shoulder and Upper Arm**
 1. Biceps brachii
 2. Brachialis
 3. Coracobrachialis
@@ -28,7 +28,7 @@ The models were trained on and output labels for the following muscles.
 11. Teres minor
 12. Triceps brachii
 
-**B)** Forearm
+**B) Forearm**
 1. Anconeus
 2. Brachioradialis
 3. Flexor carpi radialis
