@@ -43,4 +43,5 @@ The models were trained on and output labels for the following muscles.
 3. Import the trained model using the following command, replacing "PATH_TO_ZIP" with the location of the downloaded zip file:
 ######
     nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP
-4. 
+4. Convert your images to nifti file format (can use tools found in the "dataset_conversion.ipynb" notebook) and ensure the naming is compatible with nnUNet dataset formatting: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
+5. Follow the instructions in the "inference_instructions.txt" file to generate segmentations for the new images.
