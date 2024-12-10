@@ -2,7 +2,7 @@
 This repository contains weights for pretrained nnUNet models for upper limb muscle segmentation of T1 in phase MR images.
 
 ## Training data
-nnUNets were trained on in phase images of **A)** the shoulder and upper arm (n=38, age 25-83 [1-3]) and **B)** the forearm (n=20, age 25-60 [1,2]) of healthy adult subjects.
+nnUNets were trained on in-phase images of **A)** the shoulder and upper arm (n=38, age 25-83 [1-3]) and **B)** the forearm (n=20, age 25-60 [1,2]) of healthy adult subjects.
 
 Images were obtained with 1T MRI instruments; shoulder/arm images used a body coil, forearm images used a longbone coil. Specific scanner and sequence parameters can be found in source articles:
 1. K. R. S. Holzbaur, W. M. Murray, G. E. Gold, and S. L. Delp, “Upper limb muscle volumes in adult subjects,” Journal of Biomechanics, vol. 40, no. 4, pp. 742–749, Jan. 2007, doi: 10.1016/j.jbiomech.2006.11.011.
