@@ -12,7 +12,7 @@ Images were obtained with 1T MRI instruments; shoulder/arm images used a body co
 ## nnUNet settings
 Default nnUNet settings were used for training (trained Aug '24). The weights are the result of training 3D models with 5 fold cross validation. Separate models were trained for the shoulder/upper arm and forearm regions due to imaging coil and resolution differences.
 
-The models were trained on and output labels for the following muscles.
+The models output labels for the following muscles.
 
 **A) Shoulder and Upper Arm**
 1. Biceps brachii
