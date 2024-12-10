@@ -45,3 +45,6 @@ The models output labels for the following muscles.
     nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP
 4. Convert your images to nifti file format (can use tools found in the "dataset_conversion.ipynb" notebook) and ensure the naming is compatible with nnUNet dataset formatting: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
 5. Follow the instructions in the "inference_instructions.txt" file to generate segmentations for the new images.
+
+## Recommendations
+* If you are unfamiliar with/do not currently have Python installed, download miniconda (https://docs.anaconda.com/miniconda/install/)
