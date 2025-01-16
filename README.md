@@ -10,7 +10,7 @@ Images were obtained with 1T MRI instruments; shoulder/arm images used a body co
 3. M. E. Vidt, M. Daly, M. E. Miller, C. C. Davis, A. P. Marsh, and K. R. Saul, “Characterizing upper limb muscle volume and strength in older adults: a comparison with young adults,” J Biomech, vol. 45, no. 2, pp. 334–341, Jan. 2012, doi: 10.1016/j.jbiomech.2011.10.007.
 
 ## nnUNet settings
-Default nnUNet settings were used for training (trained Aug '24). The weights are the result of training 3D models with 5 fold cross validation. Separate models were trained for the shoulder/upper arm and forearm regions due to imaging coil and resolution differences.
+Default nnUNet settings were used for training (trained Aug '24). The weights are the result of training 3D models with 5 fold cross validation. Separate models were trained for the A) shoulder/upper arm and B) forearm regions due to imaging coil and resolution differences.
 
 The models output labels for the following muscles.
 
