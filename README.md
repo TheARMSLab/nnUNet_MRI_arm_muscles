@@ -1,41 +1,83 @@
 # nnUNet_MRI_arm_muscles
-This repository contains weights for pretrained nnUNet models for upper limb muscle segmentation of T1 in phase MR images.
 
-## Training data
-nnUNets were trained on in-phase images of **A)** the shoulder and upper arm (n=38, age 25-83 [1-3]) and **B)** the forearm (n=20, age 25-60 [1,2]) of healthy adult subjects.
+Pretrained 3D nnU‑Net weights for segmentation of upper limb muscles from T1 in‑phase MRI.
 
-Images were obtained with 1T MRI instruments; shoulder/arm images used a body coil, forearm images used a longbone coil. Specific scanner and sequence parameters can be found in source articles:
-1. K. R. S. Holzbaur, W. M. Murray, G. E. Gold, and S. L. Delp, “Upper limb muscle volumes in adult subjects,” Journal of Biomechanics, vol. 40, no. 4, pp. 742–749, Jan. 2007, doi: 10.1016/j.jbiomech.2006.11.011.
-2. K. R. Saul, M. E. Vidt, G. E. Gold, and W. M. Murray, “Upper Limb Strength and Muscle Volume in Healthy Middle-Aged Adults,” J Appl Biomech, vol. 31, no. 6, pp. 484–491, Dec. 2015, doi: 10.1123/jab.2014-0177.
-3. M. E. Vidt, M. Daly, M. E. Miller, C. C. Davis, A. P. Marsh, and K. R. Saul, “Characterizing upper limb muscle volume and strength in older adults: a comparison with young adults,” J Biomech, vol. 45, no. 2, pp. 334–341, Jan. 2012, doi: 10.1016/j.jbiomech.2011.10.007.
+## Datasets
 
-## nnUNet settings
-Default nnUNet settings were used for training (trained Aug '24). The weights are the result of training 3D models with 5 fold cross validation. Separate models were trained for the A) shoulder/upper arm and B) forearm regions due to imaging coil and resolution differences.
+Three previously published MRI datasets were used (healthy adults). Each dataset differs in anatomical coverage (forearm vs. shoulder/arm), number of muscles annotated, and coil type.
 
-The models output labels for the following muscles.
+| Label | Source                 | Age ± SD (yrs) | Subjects (M/F) | Muscles | Total Segmentations | Coil Type    |
+|------:|------------------------|----------------|----------------|--------:|---------------------:|--------------|
+| A     | Holzbaur et al., 2007 | 28.6 ± 4.5     | 10 (5/5)       | 32      | 295                  | Arm & Body   |
+| B     | Saul et al., 2015     | 53.2 ± 5.5     | 10 (5/5)       | 19      | 189                  | Arm & Body   |
+| C     | Vidt et al., 2012     | 75.1 ± 4.3     | 19 (11/8)      | 12      | 222                  | Body         |
 
-**A) Shoulder and Upper Arm**
-1. Biceps brachii
-2. Brachialis
-3. Coracobrachialis
-4. Deltoid
-5. Infraspinatus
-6. Latissimus dorsi
-7. Pectoralis major
-8. Subscapularis
-9. Supraspinatus
-10. Teres major
-11. Teres minor
-12. Triceps brachii
+Specific scanner and sequence parameters can be found in source articles:
 
-**B) Forearm**
-1. Anconeus
-2. Brachioradialis
-3. Flexor carpi radialis
-4. Flexor carpi ulnaris
-5. Pronator quadratus
-6. Pronator teres
-7. Supinator
+    A.  K. R. S. Holzbaur, W. M. Murray, G. E. Gold, and S. L. Delp, “Upper limb muscle volumes in adult subjects,” Journal of Biomechanics, vol. 40, no. 4, pp. 742–749, Jan. 2007, doi: 10.1016/j.jbiomech.2006.11.011.
+
+    B.  K. R. Saul, M. E. Vidt, G. E. Gold, and W. M. Murray, “Upper Limb Strength and Muscle Volume in Healthy Middle-Aged Adults,” J Appl Biomech, vol. 31, no. 6, pp. 484–491, Dec. 2015, doi: 10.1123/jab.2014-0177.
+
+    C.  M. E. Vidt, M. Daly, M. E. Miller, C. C. Davis, A. P. Marsh, and K. R. Saul, “Characterizing upper limb muscle volume and strength in older adults: a comparison with young adults,” J Biomech, vol. 45, no. 2, pp. 334–341, Jan. 2012, doi: 10.1016/j.jbiomech.2011.10.007.
+
+## Training Setup
+
+- Framework: **nnU‑Net** (3D full‑resolution), default settings
+- Training: **5‑fold cross‑validation**
+- **Three separate multiclass 3D nnU‑Net models** were trained to accommodate differences in muscle availability across datasets:
+  - **Model 1** – Muscles present **only in Dataset A**  
+  - **Model 2** – Muscles present in **Datasets A and B**  
+  - **Model 3** – Muscles present in **Datasets A, B, and C**
+> Although Model 1 predicts the full set of muscles contained in Model 2, it was trained only on Dataset A and therefore uses less training data for those shared muscles than Model 2
+
+## Output Muscle Labels
+
+**Model 1 (A only):**  
+Distal forearm / hand tendons
+1. Anconeus (ANC)
+2. Abductor pollicis longus (APL)  
+3. Brachioradialis (BRD)
+4. Extensor carpi radialis brevis (ECRB)
+5. Extensor carpi radialis longus (ECRL)
+6. Extensor carpi ulnaris (ECU)
+7. Extensor digitorum communis (EDC)
+8. Extensor digiti minimi (EDM)
+9. Extensor indicis proprius (EIP)
+10. Extensor pollicis brevis (EPB)
+11. Extensor pollicis longus (EPL)  
+12. Flexor carpi radialis (FCR)  
+13. Flexor carpi ulnaris (FCU)
+14. Flexor digitorum profundus (FDP)
+15. Flexor digitorum superficialis (FDS)
+16. Flexor pollicis longus (FPL)  
+17. Pronator quadratus (PQ)  
+18. Pronator teres (PT)  
+19. Supinator (SUP)  
+
+**Model 2 (AB — present in A and B):**  
+Forearm muscles
+1. Anconeus (ANC)  
+2. Brachioradialis (BRD)  
+3. Flexor carpi radialis (FCR)  
+4. Flexor carpi ulnaris (FCU)  
+5. Pronator quadratus (PQ)  
+6. Pronator teres (PT)  
+7. Supinator (SUP)  
+
+**Model 3 (ABC — common to A, B, and C):**  
+Shoulder & upper arm muscles
+1. Biceps brachii (BIC)  
+2. Brachialis (BRA)  
+3. Coracobrachialis (COR)  
+4. Deltoid (DELT)  
+5. Infraspinatus (INFRA)  
+6. Latissimus dorsi (LAT)  
+7. Pectoralis major (PEC)  
+8. Subscapularis (SUB)  
+9. Supraspinatus (SUPRA)  
+10. Teres major (TMAJ)  
+11. Teres minor (TMIN)  
+12. Triceps brachii (TRI)  
 
 ## How to use the model to segment new MR images
 1. Install nnUNet: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md
