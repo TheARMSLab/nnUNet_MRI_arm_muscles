@@ -33,7 +33,7 @@ Specific scanner and sequence parameters can be found in source articles:
 ## Output Muscle Labels
 
 **Model 1 (A only):**  
-Distal forearm / hand tendons
+Forearm muscles
 1. Anconeus (ANC)
 2. Abductor pollicis longus (APL)  
 3. Brachioradialis (BRD)
