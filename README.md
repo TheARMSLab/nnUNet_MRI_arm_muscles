@@ -87,7 +87,7 @@ Download the zip file(s) corresponding to the model(s) you want to use.
 ######
     nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP
 4. **Prepare your MRI images**:
--  Convert your images to nifti file format (dataset_conversion.ipynb notebook contains helpful utilities)
+-  Convert your images to nifti file format (dataset_conversion.ipynb notebook in this repo helps with conversion from DICOM)
 -  Ensure filenames follow nnUNet's expected naming scheme: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
 5. **Run inference with the correct model**: Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
 
