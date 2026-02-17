@@ -20,7 +20,7 @@ Specific scanner and sequence parameters can be found in source articles:
 
     C.  M. E. Vidt, M. Daly, M. E. Miller, C. C. Davis, A. P. Marsh, and K. R. Saul, “Characterizing upper limb muscle volume and strength in older adults: a comparison with young adults,” J Biomech, vol. 45, no. 2, pp. 334–341, Jan. 2012, doi: 10.1016/j.jbiomech.2011.10.007.
 
-## Training Setup
+## Model Details
 
 - Framework: **nnU‑Net** (3D full‑resolution), default settings
 - Training: **5‑fold cross‑validation**
@@ -80,16 +80,19 @@ Shoulder & upper arm muscles
 12. Triceps brachii (TRI)  
 
 ## How to use the models to segment new MR images
-1. **Install nnUNet**: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md
-2. **Download the model weights**: This repository includes three .zip files, one for each model (exported via nnUNetv1_export_model_to_zip).
-Download the zip file(s) corresponding to the model(s) you want to use.
-3. **Install the pretrained model(s)**: Use this command for each model zip you downloaded (replace PATH_TO_ZIP):
-######
-    nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP
-4. **Prepare your MRI images**:
--  Convert your images to nifti file format (dataset_conversion.ipynb notebook in this repo helps with conversion from DICOM)
--  Ensure filenames follow nnUNet's expected naming scheme: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
-5. **Run inference with the correct model**: Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
+1. **Install nnUNet**
+    -  https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md
+3. **Download the pretrained model(s)**
+    -  This repository includes three .zip files, one for each model (exported via nnUNetv1_export_model_to_zip). Download the zip file(s) corresponding to the model(s) you want to use.
+5. **Install the pretrained model(s)**
+    -  Use this command for each model zip you downloaded (replace PATH_TO_ZIP):
+    ######
+        nnUNetv2_install_pretrained_model_from_zip PATH_TO_ZIP
+4. **Prepare your MR images**:
+    -  Convert your images to nifti file format (dataset_conversion.ipynb notebook in this repo helps with conversion from DICOM)
+    -  Ensure filenames follow nnUNet's expected naming scheme: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
+5. **Run inference with the desired model**
+    -  Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
 
 ## Recommendations
 * If you are unfamiliar with/do not currently have Python installed, download the miniconda distribution (https://docs.anaconda.com/miniconda/install/) 
