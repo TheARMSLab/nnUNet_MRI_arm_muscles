@@ -1,6 +1,9 @@
 # nnUNet_MRI_arm_muscles
 
 Pretrained 3D nnU‑Net weights for segmentation of upper limb muscles from T1 in‑phase MRI.
+* https://github.com/MIC-DKFZ/nnUNet
+* Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring 
+method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
 
 ## Datasets
 
@@ -93,6 +96,10 @@ Shoulder & upper arm muscles
     -  Ensure filenames follow nnUNet's expected naming scheme: https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format_inference.md
 5. **Run inference with the desired model**
     -  Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
+
+## Fine-tuning Pre-Trained Models
+* To use your own own segmentation data to fine-tune the performance of these pre-trained models, follow the instructions provided by nnUNet documentation:
+* https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/pretraining_and_finetuning.md
 
 ## Recommendations
 * If you are unfamiliar with/do not currently have Python installed, download the miniconda distribution (https://docs.anaconda.com/miniconda/install/) 
