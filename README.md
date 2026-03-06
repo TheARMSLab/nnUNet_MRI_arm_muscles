@@ -100,6 +100,9 @@ Shoulder & upper arm muscles
 5. **Run inference with the desired model**
     -  Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
 
+## Getting started
+* Sample arm and body images are included in the releases page for testing your installation with correctly formatted images.
+
 ## Fine-tuning pre-trained models
 * To use your own own segmentation data to fine-tune the performance of these pre-trained models, follow the instructions provided by nnUNet documentation:
 * https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/pretraining_and_finetuning.md
