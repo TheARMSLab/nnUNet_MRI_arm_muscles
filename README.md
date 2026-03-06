@@ -25,7 +25,7 @@ Specific scanner and sequence parameters can be found in source articles:
 
     C)  M. E. Vidt, M. Daly, M. E. Miller, C. C. Davis, A. P. Marsh, and K. R. Saul, “Characterizing upper limb muscle volume and strength in older adults: a comparison with young adults,” J Biomech, vol. 45, no. 2, pp. 334–341, Jan. 2012, doi: 10.1016/j.jbiomech.2011.10.007.
 
-## Model Details
+## Model details
 
 - Framework: **nnU‑Net** (3D full‑resolution), default settings
 - Training: **5‑fold cross‑validation**
@@ -35,7 +35,7 @@ Specific scanner and sequence parameters can be found in source articles:
   - **Model 3** – Muscles present in **Datasets A, B, and C**
 > Although Model 1 predicts the full set of muscles contained in Model 2, it was trained only on Dataset A and therefore uses less training data for those shared muscles than Model 2
 
-## Output Muscle Labels
+## Output muscle labels
 
 **Model 1 (A only):**  
 Forearm muscles
@@ -84,11 +84,12 @@ Shoulder & upper arm muscles
 11. Teres minor (TMIN)  
 12. Triceps brachii (TRI)  
 
-## How to use the models to segment new MR images
+## Segmenting new MR images
 1. **Install nnUNet**
     -  https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md
 3. **Download the pretrained model(s)**
-    -  This repository includes three .zip files, one for each model (exported via nnUNetv1_export_model_to_zip). Download the zip file(s) corresponding to the model(s) you want to use.
+    -  The pretrained model zip files (one for each model, exported via nnUNetv1_export_model_to_zip) are contained in the releases associated with this repository.
+    -  Click the releases link on the right side of the page and download the zip file(s) corresponding to the model(s) you want to use.
 5. **Install the pretrained model(s)**
     -  Use this command for each model zip you downloaded (replace PATH_TO_ZIP):
     ######
@@ -99,7 +100,7 @@ Shoulder & upper arm muscles
 5. **Run inference with the desired model**
     -  Each model has its own inference instructions (see inference_instructions_model1/2/3.txt)
 
-## Fine-tuning Pre-Trained Models
+## Fine-tuning pre-trained models
 * To use your own own segmentation data to fine-tune the performance of these pre-trained models, follow the instructions provided by nnUNet documentation:
 * https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/pretraining_and_finetuning.md
 
