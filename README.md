@@ -110,5 +110,3 @@ Shoulder & upper arm muscles
 ## Recommendations
 * If you are unfamiliar with/do not currently have Python installed, download the miniconda distribution (https://docs.anaconda.com/miniconda/install/) 
     * This enables you to create a virtual environment (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), activate it, then install the necessary packages (PyTorch, nnUNetv2)
-* I use vs code (https://code.visualstudio.com/download) to interact with nnUNet
-    * Includes file management, code editing, and a command line/terminal interface
