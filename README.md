@@ -1,4 +1,4 @@
-# nnUNet_MRI_arm_muscles
+# nnUNet_MRI_arm_muscles [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 Pretrained 3D nnU‑Net weights for segmentation of upper limb muscles from T1 in‑phase MRI.
 
