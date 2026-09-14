@@ -110,3 +110,14 @@ Shoulder & upper arm muscles
 ## Recommendations
 * If you are unfamiliar with/do not currently have Python installed, download the miniconda distribution (https://docs.anaconda.com/miniconda/install/) 
     * This enables you to create a virtual environment (https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), activate it, then install the necessary packages (PyTorch, nnUNetv2)
+
+## License
+This project is licensed under the Apache License 2.0 — see [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+The segmentation model is built on [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) (Apache License 2.0),
+developed by the Division of Medical Image Computing, German Cancer Research Center (DKFZ).
+
+> Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021).
+> nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation.
+> *Nature Methods*, 18(2), 203-211.
